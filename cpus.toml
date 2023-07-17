@@ -1,0 +1,61 @@
+format_version = "0.0.1"
+last_modified = "2023-07-17"
+
+[[cpus]]
+name = "Brummig"
+builders = ["oscar91"]
+date_finished = "2022-06-30"
+significant_programs = ["Maze explorer", "Prime sieve"]
+
+[cpus.specifications]
+clock_period = 6
+gpio_count = 4
+custom_assembler = true
+mchprs_compatible = true
+urcl_compatible = false
+
+[cpus.specifications.architecture]
+architecture_type = "Harvard"
+pipelined = true
+pipeline_type = "Waterfall"
+superscalar = false
+instant_mechanics = false
+instant_architecture = false
+has_pistons = false
+data_numeric_base = 2
+word_size_bits = 8
+
+[cpus.specifications.alu]
+full_bitwise_support = true
+right_shifting = true
+multi_shifting = false
+rotating = false
+hardware_multiplication = false
+hardware_division = false
+floating_point_support = false
+
+[cpus.specifications.memory]
+general_purpose_registers = 9
+ram_bytes = 64
+ram_cache = 0
+indirect_access = true
+
+[cpus.specifications.control]
+absolute_branching = true
+indirect_branching = false
+branch_prediction = false
+predication_support = false
+interrupt_support = false
+callstack_capabilities = true
+
+[cpus.specifications.programming]
+instruction_operands = 3
+instruction_width = 16
+variable_instruction_length = false
+total_program_memory = 512
+effective_max_instructions = 256
+
+[cpus.specifications.hazards]
+alu_raw = false
+memory_raw = true
+branch = true
