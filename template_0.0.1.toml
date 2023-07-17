@@ -1,0 +1,60 @@
+[[cpus]]
+name = String
+builders = [String]
+date_finished = YYYY-MM-DD
+significant_programs = [String]
+schematic_name = String
+isa_link = String
+
+[cpus.specifications]
+clock_period = Int
+gpio_count = Int
+custom_assembler = Bool
+mchprs_compatible = Bool
+urcl_compatible = Bool
+
+[cpus.specifications.architecture]
+architecture = String
+pipelined = Bool
+pipeline_type = String
+superscalar = Bool
+instant_mechanics = Bool
+instant_architecture = Bool
+has_piston = Bool
+data_numeric_base = Int
+word_size_bits = Int
+
+[cpus.specifications.alu]
+full_bitwise_support = Bool
+right_shifting = Bool
+multi_shifting = Bool
+rotating = Bool
+hardware_multiplication = Bool
+hardware_division = Bool
+floating_point_support = Bool
+
+[cpus.specifications.memory]
+general_purpose_registers = Int
+ram_bytes = Int
+ram_cache = Int
+indirect_memory_access = Bool
+
+[cpus.specifications.control]
+absolute_branching = Bool
+indirect_branching = Bool
+branch_prediction = Bool
+predication_support = Bool
+interrupt_support = Bool
+callstack_capabilities = Bool
+
+[cpus.specifications.programming]
+instruction_operands = Int
+instruction_width = Int
+variable_instruction_length = Bool
+total_program_memory = Int
+effective_max_number_instructions = Int
+
+[cpus.specifications.hazards]
+alu_hazard_RAW = Bool
+memory_hazard_RAW = Bool
+branch_hazard = Bool
